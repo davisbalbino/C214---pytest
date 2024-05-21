@@ -1,4 +1,4 @@
-name: Python application tests
+name: Pytest
 
 on:
   push:
@@ -26,9 +26,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r task_manager/requirements.txt
 
       - name: Run tests with pytest
         run: |
+          cd task_manager
           pytest
-
