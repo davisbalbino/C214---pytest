@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+</head>
+<body>
+    <h1>Create Task</h1>
+    
+    <form action="{{ url_for('create_task') }}" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <label for="user_id">Assign to:</label>
+        <select id="user_id" name="user_id" required>
+            {% for user in users %}
+            <option value="{{ user.user_id }}">{{ user.name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Create Task</button>
+    </form>
+    
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
