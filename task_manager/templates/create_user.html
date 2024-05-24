@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='create-user.css') }}">
+
 </head>
 <body>
-    <h1>Create User</h1>
+    <div class="title">
+        <a href="{{ url_for('create_task') }}"><h1>Create a new task</h1></a>
+
+        <h1 class="main-page">Create User</h1>
+        
+        <a href="{{ url_for('index') }}"><h1>Task Menager</h1></a>
+
+    </div>
     
     <form action="{{ url_for('create_user') }}" method="post">
-        <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id" required>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input placeholder="Insert User ID" type="text" id="user_id" name="user_id" required>
+        <input placeholder="Insert User Name" type="text" id="name" name="name" required>
         <button type="submit">Create User</button>
     </form>
     
     <br>
-    <a href="{{ url_for('index') }}">Back to Home</a>
 </body>
 </html>
