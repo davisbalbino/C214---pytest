@@ -153,6 +153,15 @@ def test_get_user():
     assert retrieved_user.name == user.name
 ```
 
+### **Executando o Projeto**
+
+Para executar o projeto, caso esteja na pasta task_manager basta usar o app.py. Caso contrario é só entrar na pasta e executar o arquivo app.py:
+
+```bash
+cd task_manager
+python app.py
+```
+
 ### **Executando os Testes**
 
 Para executar os testes, navegue até o diretório onde estão localizados os arquivos de teste (**`tests/`**) e execute o seguinte comando:
