@@ -67,6 +67,7 @@ def test_mark_as_completed():
     assert task.completed is True
 ```
 
+
 ### **Teste da Classe `TaskManager`**
 
 ### **`tests/test_task_manager.py`**
